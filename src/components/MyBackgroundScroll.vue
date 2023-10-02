@@ -1,24 +1,32 @@
-<script>
-import { ref, onMounted, onUnmounted} from 'vue'
-const percent = ref (0)
+<script setup>
+
+import {ref, onMounted, onUnmounted }from 'vue'
+
+
+const percent = ref(0)
+const container = ref(0)
 
 
 function handleScroll(){
-let scrollTop = window.scrollY
-let scrollBottom = scrollTop + window.innerHeight
-let offsetTop = this.$refs.container.offsetTop
-let elementHeight = this.$refs.container.offsetHeight
+    let scrollTop = window.scrollY
+    let scrollBottom = scrollTop + window.innerHeight
 
-let result = ((scrollBottom - offsetTop) / elementHeight) * 100
-percent.value = Math.round(result)
+    let offsetTop = container.value.offsetTop
+    let elementHeight = container.value.offsetHeight
+          
+    let result = ((scrollBottom - offsetTop)/ elementHeight) * 100;
+
+    percent.value = result  > 100 ? 100 : Math.round(result)
 }
 
-onMounted (() => {
-    window.addEventListener('scroll', handleScroll)
-})
-onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll)
-})
+
+    onMounted(() =>{
+        window.addEventListener('scroll', handleScroll)
+    })
+    onUnmounted(()=>{
+        window.removeEventListener('scroll', handleScroll)
+    })
+
 </script>
 
 
@@ -31,15 +39,15 @@ onUnmounted(() => {
 </template>
 
 <style lang="scss" scoped>
-    .backgroundScroll {
-        background: black;
-        height: 2000px;
-        color: $white;
-        &__content {
-            position:sticky;
-            top:0;
-            left:0;
-            width: 100%;
-        }
+.backgroundScroll{
+    background: $black;
+    color: $white;
+    height: 2000px;
+    &__content{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
     }
+}
 </style>
