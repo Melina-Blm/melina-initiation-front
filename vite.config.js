@@ -1,3 +1,4 @@
+
 import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
@@ -11,6 +12,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: 
+        `@import "@/scss/foundations/_variables.scss";
+        @import "@/scss/foundations/_mixins.scss";`
+      }
     }
   }
 })

@@ -1,15 +1,28 @@
+<script setup>
+import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
+import MyButton from '@/components/elements/MyButton.vue';
+
+</script>
+
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <DefaultLayout>
+    <template #header>
+      <p>Test</p>
+    </template>
+    <template #aside>
+    <p>Test</p>
+    </template>
+    <template #footer>
+        <p>Test</p>
+    </template>
+
+    <p>Hello World</p>
+    <MyButton  href='/about'>My link Button</MyButton>
+
+  </DefaultLayout>
+
 </template>
 
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
 </style>
