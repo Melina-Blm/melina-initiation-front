@@ -3,6 +3,7 @@
 import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
 import MyButton from '@/components/elements/MyButton.vue';
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
+import MyIcon from '@/components/elements/MyIcon.vue';
 
 </script>
 
@@ -27,6 +28,7 @@ import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
         </ul>
       </nav>
       </template>
+      <MyIcon/>
     <MyBackgroundScroll/>
     <h1>Hello Word ! </h1>
     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, minima.</p>
