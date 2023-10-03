@@ -38,17 +38,7 @@ export default {
   
 
   export const RoundedPrimaryButton = {
-    render: (args) => {
-      return {
-        components: {
-          MyButton,
-        },
-        setup(){
-          return {args}
-        },
-        template: `<MyButton v-bind="args">My link Button</MyButton>`
-      }
-    },
+  ...PrimaryButton,
     args: {
       size: "regular",
       variant: "rounded"

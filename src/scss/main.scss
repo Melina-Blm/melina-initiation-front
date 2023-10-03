@@ -2,3 +2,9 @@
 @import "./foundations/variables";
 @import "./foundations/functions";
 
+body {
+    font-family: $primary-font-family;
+    font-size: $regular-font-size;
+    line-height:1.2;
+}
+

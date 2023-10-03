@@ -7,7 +7,19 @@ export default {
   argTypes: {
     name : {
       control : "select",
-      options : ['community', 'documentation', 'ecosystem', 'support', 'tooling']
+      options : ['community', 'documentation', 'ecosystem', 'support', 'tooling','arrow right','arrow left','arrow right2']
+    },
+    variant: {
+      control: "select",
+      options: ['white','black','orange','light orange']
+    },
+    stroke: {
+      control: "select",
+      options: ['white','black','orange','light orange']
+    },
+    size: {
+      control: "select",
+      options: ['small','regular','big']
     }
   }
 }
@@ -26,5 +38,8 @@ export const Icon = {
   },
   args: {
     name: 'community',
+    variant: 'white',
+    stroke:'black',
+    size:'small',
   }
 }

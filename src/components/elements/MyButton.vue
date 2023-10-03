@@ -16,6 +16,7 @@ const className = computed (() => ({
 </script>
 
 <template>
+  
 <a v-if="href" class="button" :href="href" :class="className"><slot></slot></a>
 <button v-else class="button" :class="className"><slot></slot></button>
 
