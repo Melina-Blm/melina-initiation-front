@@ -13,7 +13,7 @@ export default {
       control : 'text',
     },
  
-}}
+  }}
 
 
 export const Card = {
@@ -34,4 +34,5 @@ export const Card = {
 
   }
 }
+
 
