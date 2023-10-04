@@ -19,11 +19,12 @@ export const Cards = {
     }
   },
   args: {
-    description :'Description de la card',
-    title : 'Titre de la card',
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel : 'Bouton de la card',
+    description :'',
+    title : '',
+    imageSrc : '',
+    imageAlt : '',
+    buttonLabel : '',
+
 
   }
 }

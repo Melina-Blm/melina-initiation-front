@@ -7,11 +7,11 @@ export default {
   argTypes: {
     name : {
       control : "select",
-      options : ['community', 'documentation', 'ecosystem', 'support', 'tooling','arrow right','arrow left','arrow right2']
+      options : ['community', 'documentation', 'ecosystem','camion','fork knife','arrow bold', 'support', 'tooling','clock','phone','map','arrow right','arrow left','arrow right2','star stroke','star','fork spoon','facebook','twitter','instagram','linkedin']
     },
     variant: {
       control: "select",
-      options: ['white','black','orange','light orange']
+      options: ['nobg','white','black','orange','light orange',]
     },
     stroke: {
       control: "select",
@@ -20,7 +20,7 @@ export default {
     size: {
       control: "select",
       options: ['small','regular','big']
-    }
+    },
   }
 }
 
@@ -41,5 +41,6 @@ export const Icon = {
     variant: 'white',
     stroke:'black',
     size:'small',
+
   }
 }

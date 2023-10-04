@@ -9,12 +9,28 @@
     import IconArrowRight from '../icons/IconArrowRight.vue';
     import IconArrowLeft from '../icons/IconArrowLeft.vue';
     import IconArrowRight2 from '../icons/IconArrowRight2.vue';
+    import IconClock from '../icons/IconClock.vue';
+    import IconMap from '../icons/IconMap.vue';
+    import IconPhone from '../icons/IconPhone.vue';
+    import IconArrowBold from '../icons/IconArrowBold.vue';
+    import IconCamion from '../icons/IconCamion.vue';
+    import IconForkKnife from '../icons/IconForkKnife.vue';
+    import IconForkSpoon from '../icons/IconForkSpoon.vue';
+    import IconFacebook from '../icons/IconFacebook.vue'
+    import IconTwitter from '../icons/IconTwitter.vue'
+    import IconInstagram from '../icons/IconInstagram.vue'
+    import IconLinkedIn from '../icons/IconLinkedIn.vue'
+    import IconStarStroke from '../icons/IconStarStroke.vue'
+    import IconStar from '../icons/IconStar.vue'
+
+
 
     const props = defineProps ({
         name: String,
         variant: String,
         stroke: String,
         size: String,
+        hasIcon: Boolean,
 
     })
 
@@ -24,6 +40,7 @@ const className = computed (() => ({
 '-black': props.variant === 'black',
 '-orange': props.variant === 'orange',
 '-lightorange': props.variant === 'light orange',
+'-nobg': props.variant === 'nobg',
 
 '-whitestroke': props.stroke === 'white',
 '-blackstroke': props.stroke === 'black',
@@ -53,6 +70,32 @@ const className = computed (() => ({
                 return IconArrowLeft
             case 'arrow right2' :
                 return IconArrowRight2
+            case 'clock' :
+                return IconClock
+            case 'phone' :
+                return IconPhone
+            case 'map' :
+                return IconMap
+            case 'arrow bold' :
+                return IconArrowBold
+            case 'camion' :
+                return IconCamion
+            case 'fork knife' :
+                return IconForkKnife
+            case 'fork spoon' :
+                return IconForkSpoon
+            case 'facebook' :
+                return IconFacebook
+            case 'star stroke' :
+                return IconStarStroke
+            case 'star' :
+                return IconStar
+            case 'instagram' :
+                return IconInstagram
+            case 'twitter' :
+                return IconTwitter
+            case 'linked in' :
+                return IconLinkedIn
             default: 
                 return IconTooling
             
@@ -85,7 +128,10 @@ const className = computed (() => ({
         justify-content: center; 
         width: rem(50);
         color: $white;
-        background-color: $primary-color;
+        &.-nobg{
+            background-color: none;
+            box-shadow: none;
+        }
         &.-white {
         background-color: $white;
         }
@@ -125,7 +171,7 @@ const className = computed (() => ({
             }
         }
         .icon__taille {
-                width:rem(20);
+                width:rem(25);
             }
 
         

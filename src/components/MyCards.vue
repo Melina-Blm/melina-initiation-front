@@ -4,25 +4,31 @@ import { reactive } from 'vue'
 
 const response =  [
     {
-    description :'Description de la card',
-    title : 'Card 1',
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel : 'Bouton de la card',
+    description :'',
+    title : 'Pizza',
+    imageSrc : 'src/assets/pizza-pepperoni.jpg',
+    imageAlt : 'Image de pizza',
+    buttonLabel : 'Add To Cart',
+    price:'18.50',
+    rating:'5.0',
     },
     {
-    description :'Description de la fdgfcard',
-    title : 'Card 2',
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel : 'Bouton de la card',
+    description :'',
+    title : 'Enchilade',
+    imageSrc : 'src/assets/enchiladas.jpg',
+    imageAlt : 'Image de enchiladas',
+    buttonLabel : 'Add To Cart',
+    price:'25.50',
+    rating:'5.0',
     },
     {
-    description :'Description de la fdgfcard',
-    title : 'Card 3',
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel : 'Bouton de la card',
+    description :'',
+    title : 'Green Beans',
+    imageSrc : 'src/assets/greenbeans.jpg',
+    imageAlt : 'Image de green beans',
+    buttonLabel : 'Add To Cart',
+    price:'12.00',
+    rating:'4.9',
     }
 ]
 

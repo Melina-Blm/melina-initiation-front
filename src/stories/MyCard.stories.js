@@ -19,9 +19,13 @@ export default {
     },
     buttonLabel : {
       control : 'text',
-    }
-  
-  }
+    },
+    price : {
+    control : 'text',
+    },
+    rating : {
+    control : 'text',
+}}
 }
 
 export const Card = {
@@ -37,11 +41,13 @@ export const Card = {
     }
   },
   args: {
-    description :'Description de la card',
-    title : 'Titre de la card',
-    imageSrc : 'http://placekitten.com/300/150',
-    imageAlt : 'Image de chat',
-    buttonLabel : 'Bouton de la card',
+    description :'',
+    title : 'Pizza',
+    imageSrc : 'src/assets/pizza-pepperoni.jpg',
+    imageAlt : 'Image de pizza',
+    buttonLabel : 'Add To Cart',
+    price:'18.50',
+    rating:'5.0',
 
   }
 }

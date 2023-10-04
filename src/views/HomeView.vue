@@ -4,7 +4,7 @@ import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
 import MyButton from '@/components/elements/MyButton.vue';
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
 import MyIcon from '@/components/elements/MyIcon.vue';
-import SocialsIcons from '../components/elements/SocialsIcons.vue';
+
 import IconCar from  '../components/icons/iconsservices/IconCar.vue';
 
 
@@ -33,7 +33,7 @@ import IconCar from  '../components/icons/iconsservices/IconCar.vue';
       </template>
       <MyIcon/>
       <SocialsIcons/>
-      <IconCar/>
+ 
 
 
     <MyBackgroundScroll/>
