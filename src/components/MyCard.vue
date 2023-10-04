@@ -2,39 +2,36 @@
 import MyButton from './elements/MyButton.vue';
 import MyIcon from './elements/MyIcon.vue';
 
-const props = defineProps ({
-    imageSrc: String,
-    imageAlt : String,
-    title : String,
-    description : String,
-    buttonLabel : String,
-    price: String,
-    rating: String,
-
+defineProps({
+  imageAlt: String,
+  imageSrc: String,
+  title: String,
+  description: String,
+  buttonLabel: String
 })
 
 </script>
 
 <template>
-    <div class="card">
-        <div class="card__image">
-            <img :src='imageSrc' :alt="imageAlt" />
-        </div>
-        <div class="card__content"> 
-            <div class="card__content-align">
-            <h2>{{ title }}</h2>
-            <p><MyIcon name="star" variant="nobg" stroke="orange" size="small"/>{{ rating }}</p>
-            </div>
-            <p>{{ description }}</p>
-            <div class="card__button">
-            <MyButton variant="rounded" :has-icon="true" size="small">{{ buttonLabel }}</MyButton>
-            <p>${{ price }}</p>
-            </div>
+  <div class="card">
+    <div class="card__image">
+      <img :src='imageSrc' :alt="imageAlt" />
+    </div>
+    <div class="card__content"> 
+      <div class="card__content-align">
+        <h2>{{ title }}</h2>
+        <p><MyIcon  name="star" variant="nobg" stroke="orange" size="small"/>{{ rating }}</p>
+      </div>
+      <p>{{ description }}</p>
+      <div class="card__button">
+        <MyButton variant="rounded" :has-icon="true" size="small">{{ buttonLabel }}</MyButton>
+        <p>${{ price }}</p>
+      </div>
       
         
 
-        </div>
     </div>
+  </div>
     
 </template>
 

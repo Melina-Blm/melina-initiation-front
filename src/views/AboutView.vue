@@ -11,10 +11,10 @@ import MyButton from '@/components/elements/MyButton.vue';
       <p>Test</p>
     </template>
     <template #aside>
-    <p>Test</p>
+      <p>Test</p>
     </template>
     <template #footer>
-        <p>Test</p>
+      <p>Test</p>
     </template>
 
     <p>Hello World</p>

@@ -5,7 +5,6 @@ import MyButton from '@/components/elements/MyButton.vue';
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
 import MyIcon from '@/components/elements/MyIcon.vue';
 
-import IconCar from  '../components/icons/iconsservices/IconCar.vue';
 
 
 </script>
@@ -20,9 +19,9 @@ import IconCar from  '../components/icons/iconsservices/IconCar.vue';
           <li><a href="#">Nav link 1</a></li>
         </ul>
       </nav>
-      </template>
+    </template>
 
-      <template v-slot:aside>
+    <template v-slot:aside>
       <nav>
         <ul>
           <li><a href="#">Aside link 1</a></li>
@@ -30,9 +29,9 @@ import IconCar from  '../components/icons/iconsservices/IconCar.vue';
           <li><a href="#">Aside link 1</a></li>
         </ul>
       </nav>
-      </template>
-      <MyIcon/>
-      <SocialsIcons/>
+    </template>
+    <MyIcon/>
+    <SocialsIcons/>
  
 
 

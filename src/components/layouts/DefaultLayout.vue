@@ -1,19 +1,19 @@
 <template>
 
-    <main class="layout">
-        <header class="layout__header">
-            <slot name="header"></slot>  
-        </header>  
-        <aside class="layout__aside">
-            <slot name="aside"></slot>  
-        </aside>
-        <article class="layout__article">
-            <slot></slot>  
-        </article>
-        <footer class="layout__footer">
-            <slot name="footer"></slot>  
-        </footer>
-    </main>
+  <main class="layout">
+    <header class="layout__header">
+      <slot name="header"></slot>  
+    </header>  
+    <aside class="layout__aside">
+      <slot name="aside"></slot>  
+    </aside>
+    <article class="layout__article">
+      <slot></slot>  
+    </article>
+    <footer class="layout__footer">
+      <slot name="footer"></slot>  
+    </footer>
+  </main>
 </template>
 
 <style lang="scss" scoped>

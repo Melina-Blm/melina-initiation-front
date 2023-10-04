@@ -21,11 +21,11 @@ export default {
       control : 'text',
     },
     price : {
-    control : 'text',
+      control : 'text',
     },
     rating : {
-    control : 'text',
-}}
+      control : 'text',
+    }}
 }
 
 export const Card = {

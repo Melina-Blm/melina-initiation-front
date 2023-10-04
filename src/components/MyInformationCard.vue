@@ -1,23 +1,23 @@
 <script setup>
 
-const props = defineProps ({
-        title: String,
-        description: String,
+defineProps ({
+  title: String,
+  description: String,
 
-    })
+})
 
 </script>
 
 <template>
-    <div class="card">
-        <div class="card__content"> 
+  <div class="card">
+    <div class="card__content"> 
             
            
-            <h2>{{ title }}</h2>
-            <p>{{ description }}</p>
-        </div>
-      
+      <h2>{{ title }}</h2>
+      <p>{{ description }}</p>
     </div>
+      
+  </div>
 
     
 </template>

@@ -3,7 +3,7 @@ import MyCard from './MyCard.vue'
 import { reactive } from 'vue'
 
 const response =  [
-    {
+  {
     description :'',
     title : 'Pizza',
     imageSrc : 'src/assets/pizza-pepperoni.jpg',
@@ -11,8 +11,8 @@ const response =  [
     buttonLabel : 'Add To Cart',
     price:'18.50',
     rating:'5.0',
-    },
-    {
+  },
+  {
     description :'',
     title : 'Enchilade',
     imageSrc : 'src/assets/enchiladas.jpg',
@@ -20,8 +20,8 @@ const response =  [
     buttonLabel : 'Add To Cart',
     price:'25.50',
     rating:'5.0',
-    },
-    {
+  },
+  {
     description :'',
     title : 'Green Beans',
     imageSrc : 'src/assets/greenbeans.jpg',
@@ -29,7 +29,7 @@ const response =  [
     buttonLabel : 'Add To Cart',
     price:'12.00',
     rating:'4.9',
-    }
+  }
 ]
 
 const cards = reactive(response)
@@ -38,9 +38,9 @@ const cards = reactive(response)
 
 <template>
 
-<div class="cards">
-<MyCard v-for='card in cards' v-bind='card'/>
-</div>
+  <div class="cards">
+    <MyCard v-for='card in cards' v-bind='card' :key="card.title" />
+  </div>
 </template>
 
 <style lang="scss" scoped> 

@@ -1,11 +1,11 @@
 <script setup>
 import {computed} from "vue"
 const props = defineProps({
-        content: String,
-        href: String,
-        size: String,
-        variant: String
-    })
+  content: String,
+  href: String,
+  size: String,
+  variant: String
+})
 
 const className = computed (() => ({
 
@@ -17,8 +17,8 @@ const className = computed (() => ({
 
 <template>
   
-<a v-if="href" class="button" :href="href" :class="className"><slot></slot></a>
-<button v-else class="button" :class="className"><slot></slot></button>
+  <a v-if="href" class="button" :href="href" :class="className"><slot></slot></a>
+  <button v-else class="button" :class="className"><slot></slot></button>
 
 </template>
 
