@@ -10,6 +10,6 @@ module.exports = {
   rules: {
     "no-console":"error",
     "indent": ["error", 2],
-    "vue/html-ident":["error", 2],
+    "vue/html-indent":["error", 2],
   }
 }
