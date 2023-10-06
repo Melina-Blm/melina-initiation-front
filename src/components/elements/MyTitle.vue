@@ -27,7 +27,9 @@ const className = computed (()=>({
   '-bold' : props.weight == 'bold',
   '-light' : props.weight == 'light',
 
+
   '-orange' : props.color == 'orange',
+  '-grey' : props.color == 'grey',
 }))
 
 </script>
@@ -40,7 +42,7 @@ const className = computed (()=>({
     <h3 v-else-if="props.el === 'h3'"  class="title" :class="className"><slot></slot></h3>
     <p v-else-if="props.el === 'p'" class="title" :class="className"><slot></slot></p>
     <h4 v-else-if="props.el === 'h4'"  class="title" :class="className"><slot></slot></h4>
-    <p v-else>Bouton</p>
+  
 </div>
     
 </template>
@@ -71,12 +73,17 @@ margin:0;
   &.-light {
     font-weight:400;
   }
+ 
   &.-bold {
-    font-size:bold;
+    font-weight:bold;
   }
   &.-orange {
     color:orange;
   }
-
+  &.-grey {
+    color:$gray;
+  }
 }
+
+
 </style>

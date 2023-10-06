@@ -6,29 +6,32 @@ const response =  [
   {
     description :'But I must explain to you how all this mistaken idea of denouncing pleasure and prasising pain was bron.',
     title : 'Qualityfull Food',
-    name: 'fork spoon',
-    variant: 'light orange',
+    name: 'fork knife',
+    color: 'light orange',
     stroke:'orange',
     size:'big',
     border: 'with border',
+
   },
   {
     description :'But I must explain to you how all this mistaken idea of denouncing pleasure and prasising pain was bron.',
     title : 'Healthy Food',
     name: 'fork spoon',
-    variant: 'light orange',
+    color: 'light orange',
     stroke:'orange',
     size:'big',
     border: 'with border',
+  
   },
   {
     description :'But I must explain to you how all this mistaken idea of denouncing pleasure and prasising pain was bron.',
     title : 'Fast Delivery',
     name: 'camion',
-    variant: 'light orange',
+    color: 'light orange',
     stroke:'orange',
     size:'big',
     border: 'with border',
+
   },
 ]
 

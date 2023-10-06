@@ -4,27 +4,30 @@ import IconCamion from './icons/IconCamion.vue';
 import IconForkKnife from './icons/IconForkKnife.vue';
 import IconForkSpoon from './icons/IconForkSpoon.vue';
 import MyTitle from './elements/MyTitle.vue';
+import IconClock from './icons/IconClock.vue';
+import IconMap from './icons/IconMap.vue';
+import IconPhone from './icons/IconPhone.vue';
 
 
 const props = defineProps ({
   title: String,
   description: String,
   name: String,
-  variant: String,
+  color: String,
   stroke: String,
   size: String,
+
 
 
 })
 
 const className = computed (() => ({
 
-'-white': props.variant === 'white',
-'-black': props.variant === 'black',
-'-orange': props.variant === 'orange',
-'-lightorange': props.variant === 'light orange',
-'-nobg': props.variant === 'nobg',
-
+'-white': props.color === 'white',
+'-black': props.color === 'black',
+'-orange': props.color === 'orange',
+'-lightorange': props.color === 'light orange',
+'-nobg': props.color === 'nobg',
 
 
 '-whitestroke': props.stroke === 'white',
@@ -35,6 +38,8 @@ const className = computed (() => ({
 '-small': props.size === 'small',
 '-big': props.size === 'big',
 
+
+
 }))
 
 const getIcon = computed (() => {  
@@ -43,6 +48,12 @@ const getIcon = computed (() => {
     return IconForkKnife
   case 'camion' :
     return IconCamion
+  case 'clock' :
+    return IconClock
+  case 'map' :
+    return IconMap
+  case 'phone' : 
+    return IconPhone
   default: 
     return IconForkSpoon
             
@@ -74,6 +85,7 @@ const getIcon = computed (() => {
         border-radius: rem(20);
         border : rem(1) solid $gray;
         overflow: hidden;
+ 
         &__content{
           
           display: flex;
@@ -102,6 +114,7 @@ const getIcon = computed (() => {
         justify-content: center; 
         width: rem(50);
         color: $white;
+        
         &.-nobg{
             background-color: none;
             box-shadow: none;

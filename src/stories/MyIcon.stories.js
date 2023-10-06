@@ -7,7 +7,7 @@ export default {
   argTypes: {
     name : {
       control : "select",
-      options : ['community', 'documentation', 'ecosystem','camion','fork knife','arrow bold', 'support', 'tooling','clock','phone','map','arrow right','arrow left','arrow right2','star stroke','star','fork spoon','facebook','twitter','instagram','linkedin']
+      options : ['community', 'documentation', 'ecosystem','camion','fork knife','arrow bold', 'support', 'tooling','clock','phone','map','arrow right','arrow left','arrow right2','star stroke','star','fork spoon','facebook','twitter','instagram','linkedin','search','cart']
     },
     variant: {
       control: "select",

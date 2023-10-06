@@ -18,7 +18,7 @@ export default {
     },
     color : {
       control : "select",
-      options : ['orange', 'default']
+      options : ['orange', 'default','gray']
     },
   }
 }

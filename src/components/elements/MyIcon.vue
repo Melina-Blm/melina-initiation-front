@@ -22,7 +22,8 @@ import IconInstagram from '../icons/IconInstagram.vue'
 import IconLinkedIn from '../icons/IconLinkedIn.vue'
 import IconStarStroke from '../icons/IconStarStroke.vue'
 import IconStar from '../icons/IconStar.vue'
-
+import IconSearch from '../icons/IconSearch.vue'
+import IconShoppingCart from '../icons/IconShoppingCart.vue';
 
 
 const props = defineProps ({
@@ -74,6 +75,10 @@ const getIcon = computed (() => {
     return IconClock
   case 'phone' :
     return IconPhone
+  case 'search' :
+    return IconSearch
+  case 'cart' :
+    return IconShoppingCart
   case 'map' :
     return IconMap
   case 'arrow bold' :

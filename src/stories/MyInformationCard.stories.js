@@ -16,7 +16,7 @@ export default {
       control : "select",
       options : ['camion','fork knife', 'fork spoon']
     },
-    variant: {
+    color: {
       control: "select",
       options: ['nobg','white','black','orange','light orange',]
     },
@@ -28,6 +28,7 @@ export default {
       control: "select",
       options: ['small','regular','big']
     },
+
 
   }}
 
@@ -48,10 +49,11 @@ export const Card = {
     description :'But I must explain to you how all this mistaken idea of denouncing pleasure and prasising pain was bron.',
     title : 'Qualityfull Food',
     name: 'fork spoon',
-    variant: 'light orange',
+    color: 'light orange',
     stroke:'orange',
     size:'big',
     border: 'with border',
+    variant:'test',
   }
 }
 
