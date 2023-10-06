@@ -1,55 +1,45 @@
 <script setup>
-//import MyButton from '@/components/elements/MyButton.vue'
-import DefaultLayout from '@/components/layouts/DefaultLayout.vue';
-import MyButton from '@/components/elements/MyButton.vue';
-import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
-import MyIcon from '@/components/elements/MyIcon.vue';
+import MyCards from '../components/MyCards.vue'
+import MyInformationsCards from '../components/MyInformationsCards.vue'
+import MyHeader from '../components/MyHeader.vue';
 
+import MyTitle from '../components/elements/MyTitle.vue';
+import MyHero from '../components/MyHero.vue'
 
 
 </script>
 
 <template>
-  <DefaultLayout>
-    <template v-slot:header>
-      <nav>
-        <ul>
-          <li><a href="#">Nav link 1</a></li>
-          <li><a href="#">Nav link 1</a></li>
-          <li><a href="#">Nav link 1</a></li>
-        </ul>
-      </nav>
-    </template>
+<header class="header">
+<MyHeader/>
+</header>
 
-    <template v-slot:aside>
-      <nav>
-        <ul>
-          <li><a href="#">Aside link 1</a></li>
-          <li><a href="#">Aside link 1</a></li>
-          <li><a href="#">Aside link 1</a></li>
-        </ul>
-      </nav>
-    </template>
-    <MyIcon/>
-    <SocialsIcons/>
- 
+<MyHero/>
+<div class="section">
+  <p class="section__title">Product</p>
+  <MyTitle el="h3" size="big">Most Popular Items</MyTitle>
+</div>
+  <MyCards/>
 
+  <div class="section">
+  <p class="section__title">Services</p>
+  <MyTitle el="h3" size="big">Why Choose Our Favorite Food</MyTitle>
+</div>
+  <MyInformationsCards/>
 
-    <MyBackgroundScroll/>
-    <h1>Hello Word ! </h1>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, minima.</p>
-    <MyButton  href='/about'>My link Button</MyButton>
-
-    <template v-slot:footer>
-      <MyButton  variant="rounded">My rounded button</MyButton>
-    
-      
-    </template>
-  </DefaultLayout>
-
-
-  <!-- <MyButton  size="small"  variant="rounded" href='/about'>My button</MyButton>
-  <MyButton  href='/about'>My link Button</MyButton>
-  <MyButton  variant="rounded">My rounded button</MyButton> -->
 </template>
+
+<style lang="scss" scoped>
+
+.section {
+  text-align: center;
+  margin: rem(120) 0 rem(40) 0 ;
+  p {
+    color:$primary-color;
+  }
+
+}
+
+
+</style>
 

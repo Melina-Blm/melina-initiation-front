@@ -29,7 +29,34 @@ const response =  [
     buttonLabel : 'Add To Cart',
     price:'12.00',
     rating:'4.9',
-  }
+  },
+  {
+    description :'',
+    title : 'Gyro Sandwich',
+    imageSrc : 'src/assets/sandwich.jpg',
+    imageAlt : 'Image de sandwich',
+    buttonLabel : 'Add To Cart',
+    price:'15.00',
+    rating:'4.9',
+  },
+  {
+    description :'',
+    title : 'Chicken Pot Pie',
+    imageSrc : 'src/assets/chicken-pot-pie.png',
+    imageAlt : 'Image de chicken pot pie',
+    buttonLabel : 'Add To Cart',
+    price:'25.00',
+    rating:'4.9',
+  },
+  {
+    description :'',
+    title : 'Green Salad',
+    imageSrc : 'src/assets/green-salad.jpg',
+    imageAlt : 'Image de green salad',
+    buttonLabel : 'Add To Cart',
+    price:'15.00',
+    rating:'4.9',
+  },
 ]
 
 const cards = reactive(response)

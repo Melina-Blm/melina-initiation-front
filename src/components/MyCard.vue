@@ -1,13 +1,18 @@
 <script setup>
 import MyButton from './elements/MyButton.vue';
 import MyIcon from './elements/MyIcon.vue';
+import MyTitle from './elements/MyTitle.vue';
+
 
 defineProps({
   imageAlt: String,
   imageSrc: String,
   title: String,
   description: String,
-  buttonLabel: String
+  buttonLabel: String,
+  price: String,
+  rating: String,
+
 })
 
 </script>
@@ -19,13 +24,13 @@ defineProps({
     </div>
     <div class="card__content"> 
       <div class="card__content-align">
-        <h2>{{ title }}</h2>
-        <p><MyIcon  name="star" variant="nobg" stroke="orange" size="small"/>{{ rating }}</p>
+        <MyTitle size="medium" el="h2">{{ title }}</MyTitle>
+        <MyTitle size="small" el="p"><MyIcon  name="star" variant="nobg" stroke="orange" size="small"/>{{ rating }}</MyTitle>
       </div>
       <p>{{ description }}</p>
       <div class="card__button">
         <MyButton variant="rounded" :has-icon="true" size="small">{{ buttonLabel }}</MyButton>
-        <p>${{ price }}</p>
+        <MyTitle size="regular" el="p" weight="bold">${{ price }}</MyTitle>
       </div>
       
         
@@ -38,37 +43,30 @@ defineProps({
 <style lang='scss' scoped>
 
     .card {
-        max-width: rem(500);
+        max-width: rem(485);
         border-radius: rem(20);
         border : rem(1) solid $gray;
+        box-shadow: 0 0 5px 0 rgba(1, 1, 1, 0.108);
         overflow: hidden;
+        margin-bottom: rem(30);
         &__content{
             padding: rem(30) rem(30);
         > * + * {
-            margin-top: rem(20);
+           margin-top: rem(20);
         }
-        h2 {
-            font-weight:bold;
-            font-size: $medium-font-size;
-        }
+ 
         &-align { 
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        p {
-            font-size: $small-font-size;
-        }
+   
         }
         &__button {
             text-align: left;
             display: flex;
             align-items: center;
             justify-content: space-between;
-        p {
-            font-weight: 600;
-            font-size: $regular-font-size,
-        }
         }
     }
 </style>

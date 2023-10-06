@@ -12,7 +12,23 @@ export default {
     title : {
       control : 'text',
     },
- 
+    name : {
+      control : "select",
+      options : ['camion','fork knife', 'fork spoon']
+    },
+    variant: {
+      control: "select",
+      options: ['nobg','white','black','orange','light orange',]
+    },
+    stroke: {
+      control: "select",
+      options: ['white','black','orange','light orange']
+    },
+    size: {
+      control: "select",
+      options: ['small','regular','big']
+    },
+
   }}
 
 
@@ -29,9 +45,13 @@ export const Card = {
     }
   },
   args: {
-    description :'Test',
-    title : 'Pizza',
-
+    description :'But I must explain to you how all this mistaken idea of denouncing pleasure and prasising pain was bron.',
+    title : 'Qualityfull Food',
+    name: 'fork spoon',
+    variant: 'light orange',
+    stroke:'orange',
+    size:'big',
+    border: 'with border',
   }
 }
 
