@@ -25,7 +25,7 @@ export const InformationsCards = {
     color: 'light orange',
     stroke:'orange',
     size:'big',
-    border: 'with border',
+
   
   }
 }

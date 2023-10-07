@@ -52,8 +52,7 @@ export const Card = {
     color: 'light orange',
     stroke:'orange',
     size:'big',
-    border: 'with border',
-    variant:'test',
+
   }
 }
 

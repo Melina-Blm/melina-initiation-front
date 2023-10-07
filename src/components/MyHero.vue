@@ -35,7 +35,7 @@ import MyIcon from '../components/elements/MyIcon.vue';
 .hero {
   display: grid;
   grid-template-columns:  repeat(2, 1fr);
-
+    
 
   .hero__btn {
     display: flex;

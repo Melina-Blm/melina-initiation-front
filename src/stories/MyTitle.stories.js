@@ -6,7 +6,7 @@ export default {
   argTypes: {
     el : {
       control : "select",
-      options : ['h1', 'h2', 'h3', 'h4','p']
+      options : ['h1', 'h2', 'h3', 'h4','h5','p']
     },
     size : {
       control : "select",
@@ -18,7 +18,7 @@ export default {
     },
     color : {
       control : "select",
-      options : ['orange', 'default','gray']
+      options : ['orange', 'default','gray','white']
     },
   }
 }

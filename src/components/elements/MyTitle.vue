@@ -22,6 +22,7 @@ const className = computed (()=>({
   ' -h2': props.el === 'h2',
   ' -h3': props.el === 'h3',
   ' -h4': props.el === 'h4',
+  ' -h5': props.el === 'h5',
   ' -p': props.el === 'p',
 
   '-bold' : props.weight == 'bold',
@@ -30,6 +31,7 @@ const className = computed (()=>({
 
   '-orange' : props.color == 'orange',
   '-grey' : props.color == 'grey',
+  '-white' : props.color == 'white',
 }))
 
 </script>
@@ -41,6 +43,7 @@ const className = computed (()=>({
     <h1 v-else-if="props.el === 'h1'"  class="title" :class="className"><slot></slot></h1>
     <h3 v-else-if="props.el === 'h3'"  class="title" :class="className"><slot></slot></h3>
     <p v-else-if="props.el === 'p'" class="title" :class="className"><slot></slot></p>
+    <h5 v-else-if="props.el === 'h5'"  class="title" :class="className"><slot></slot></h5>
     <h4 v-else-if="props.el === 'h4'"  class="title" :class="className"><slot></slot></h4>
   
 </div>
@@ -82,6 +85,9 @@ margin:0;
   }
   &.-grey {
     color:$gray;
+  }
+  &.-white {
+    color:$white;
   }
 }
 

@@ -4,6 +4,9 @@ import MyFooter from '../components/MyFooter.vue';
 import MyHero from '../components/MyHero.vue'
 import MyPopularItems from '../components/MyPopularItems.vue';
 import MyServices from '../components/MyServices.vue';
+import MyTestimonials from '../components/MyTestimonials.vue';
+import MyNewsletter from '../components/MyNewsletter.vue';
+
 
 
 </script>
@@ -17,6 +20,8 @@ import MyServices from '../components/MyServices.vue';
 
     <MyPopularItems/>
     <MyServices/>
+    <MyTestimonials/>
+    <MyNewsletter/>
   </div>
 <MyFooter/>
 </template>

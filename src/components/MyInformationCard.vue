@@ -115,10 +115,6 @@ const getIcon = computed (() => {
         width: rem(50);
         color: $white;
         
-        &.-nobg{
-            background-color: none;
-            box-shadow: none;
-        }
         &.-white {
         background-color: $white;
         }
