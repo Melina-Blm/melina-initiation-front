@@ -3,6 +3,7 @@ import RecipeCard from '../components/RecipeCard.vue';
 import { onMounted, ref, computed } from "vue";
 import {client} from '@/utils/axios.js';
 import MyHeader from '../components/MyHeader.vue';
+import MyTitle from '../components/elements/MyTitle.vue';
 
 const getRecipesThen = () => {
   // 1er appel
@@ -104,8 +105,11 @@ onMounted(async () => {
         </div>
         </div>
         <button v-if="moreRecipesToShow" @click="seeMoreRecipe">Voir plus de recettes</button> -->
-
-    <p>Toutes les recettes</p>
+        <div class="section">
+            <p class="section__title">Recettes</p>
+             <MyTitle el="h3" size="big">Toutes nos recettes</MyTitle>
+        </div>
+   
     <div class="recipes-list">
       <div v-for="(recipe, index) in recipes" :key="index">
         <RecipeCard :id="recipe.recipe_id" :title="recipe.recipe_name" :description="recipe.recipe_description" :image="recipe.image_url" />
@@ -127,5 +131,30 @@ hasGoalId1 {{ hasGoalId1 }}<br><br> -->
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
+    gap:rem(40);
+
+    @media screen and (max-width: $big){
+  
+  grid-template-columns:  repeat(2, 1fr);
+  }
+  @media screen and (max-width: $large){
+
+  grid-template-columns:  repeat(1, 1fr);
+  }
+
+  &button {
+    background-color: red;
+  }
 }
+
+
+.section {
+  text-align: center;
+  margin: rem(80) 0 rem(40) 0 ;
+  p {
+    color:$primary-color;
+  }
+
+}
+
 </style>

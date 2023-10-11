@@ -1,4 +1,7 @@
 <script setup>
+import MyTitle from './elements/MyTitle.vue';
+import MyButton from './elements/MyButton.vue';
+
 defineProps({
 id: Number,
 title: String,
@@ -9,11 +12,12 @@ image: String
 
 <template>
   <div class="c-recipe-card">
-    <div class="c-recipe-card__content">
       <img class="c-recipe-card__image" :src="image" alt="">
-      <p class="c-recipe-card__title">{{ title }}</p>
-      <p class="c-recipe-card__description">{{ description }}</p>
-      <router-link :to="'/recipes/' + id">Plus d'infos</router-link>
+    <div class="c-recipe-card__content">
+    
+      <MyTitle el="h3" size="regular" class="c-recipe-card__title">{{ title }}</MyTitle>
+      <MyTitle el="p" size="regular"  class="c-recipe-card__description">{{ description }}</MyTitle>
+      <MyButton class="btn-more" variant="rounded" size="small" :has-icon="false"><router-link :to="'/recipes/' + id">Plus d'infos</router-link></MyButton>
     </div>
   </div>
 </template>
@@ -25,16 +29,27 @@ image: String
   border-radius: 10px;
   width:400px;
 
-  
-
+  border-radius: rem(20);
+ 
+  box-shadow: 0 0 5px 0 rgba(1, 1, 1, 0.108);
+  .btn-more a{
+  text-decoration: none;
+  color:$white;
+  }
   &__content {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+    gap:rem(10)
   }
 
   &__image {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
+    border-radius: 10px;
+
   }
 
   &__title {
