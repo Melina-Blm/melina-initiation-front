@@ -1,8 +1,5 @@
 <script setup>
 import { computed } from 'vue';
-import IconCamion from './icons/IconCamion.vue';
-import IconForkKnife from './icons/IconForkKnife.vue';
-import IconForkSpoon from './icons/IconForkSpoon.vue';
 import MyTitle from './elements/MyTitle.vue';
 import IconClock from './icons/IconClock.vue';
 import IconMap from './icons/IconMap.vue';
@@ -16,8 +13,6 @@ const props = defineProps ({
   color: String,
   stroke: String,
   size: String,
-
-
 
 })
 
@@ -44,18 +39,12 @@ const className = computed (() => ({
 
 const getIcon = computed (() => {  
   switch (props.name) {
-  case 'fork knife' :
-    return IconForkKnife
-  case 'camion' :
-    return IconCamion
   case 'clock' :
     return IconClock
   case 'map' :
     return IconMap
-  case 'phone' : 
-    return IconPhone
   default: 
-    return IconForkSpoon
+    return IconPhone
             
   }
 
@@ -66,9 +55,11 @@ const getIcon = computed (() => {
   <div class="card">
     <div class="card__content"> 
       <i class="icon" :class="className">
-    <component :is='getIcon' class="icon__taille"/></i>
-      <MyTitle size="medium" el="h1">{{ title }}</MyTitle>
-      <MyTitle size="regular" el="p" >{{ description }}</MyTitle>
+      <component :is='getIcon' class="icon__taille"/>
+      </i>
+    
+      <MyTitle size="regular" el="h5">{{ title }}</MyTitle>
+      <MyTitle size="small" el="p" >{{ description }}</MyTitle>
     </div>
       
   </div>
@@ -78,36 +69,26 @@ const getIcon = computed (() => {
 
 <style lang='scss' scoped>
 
-    .card {
-      
-        // width: rem(420);
-        // height: 100%;
-        
-        border-radius: rem(20);
-        border : rem(1) solid $gray;
-        overflow: hidden;
-        
- 
-        &__content{
-          
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-            text-align: center;
-            padding: rem(110) rem(30);
-        > * + * {
-            margin-top: rem(25);
-        }
-        h2 {
-            font-weight:bold;
-            font-size: $medium-font-size;
-        }
-        }
- 
-    }
+.card {
 
-    
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:rem(9);
+    border-right: rem(2) solid $gray;
+
+
+  }
+
+  
+
+  @media screen and (max-width: $big){
+    &__content {
+      margin-bottom: rem(40);
+    }
+    }
+}
     .icon {
         align-items: center;
         display: inline-flex;
@@ -158,8 +139,9 @@ const getIcon = computed (() => {
         .icon__taille {
                 width:rem(25);
             }
-
+           
         
     }
 
+    
 </style>

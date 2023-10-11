@@ -20,7 +20,7 @@ import MyTitle from '../components/elements/MyTitle.vue';
     </div>
     <div class="footer__grid">
         <MyTitle size="medium" class="footer__grid-title" el="h4">Opening Restaurant</MyTitle>
-        <div class="footer__grid-links">
+        <div class="footer__grid-space">
         <MyTitle size="regular" el="p" color="grey">Sat-Wet: 09:00am-10:00PM</MyTitle>
         <MyTitle size="regular" el="p" color="grey">Thursday: 09:00am-11:00PM</MyTitle>
         <MyTitle size="regular" el="p" color="grey">Friday: 09:00am-8:00PM</MyTitle>
@@ -29,16 +29,18 @@ import MyTitle from '../components/elements/MyTitle.vue';
 
     <div class="footer__grid">
         <MyTitle size="medium" class="footer__grid-title"  el="h4">User Link</MyTitle>
-        <MyTitle size="regular" el="p" color="grey">About Us</MyTitle>
-        <MyTitle size="regular" el="p" color="grey">Contact Us</MyTitle>
-        <MyTitle size="regular" el="p" color="grey">Order Delivery</MyTitle>
-        <MyTitle size="regular" el="p" color="grey">Payment & Tex</MyTitle>
-        <MyTitle size="regular" el="p" color="grey">Terms of Services</MyTitle>
+        <div class="footer__grid-space">
+          <MyTitle size="regular" el="p" color="grey">About Us</MyTitle>
+          <MyTitle size="regular" el="p" color="grey">Contact Us</MyTitle>
+          <MyTitle size="regular" el="p" color="grey">Order Delivery</MyTitle>
+          <MyTitle size="regular" el="p" color="grey">Payment & Tex</MyTitle>
+          <MyTitle size="regular" el="p" color="grey">Terms of Services</MyTitle>
+        </div>
     </div>
 
     <div class="footer__grid">
         <MyTitle size="medium" el="h4" class="footer__grid-title" >Contact Us</MyTitle>
-        <div class="footer__grid-test">
+        <div class="footer__grid-space">
         <MyTitle size="regular" el="p" color="grey">1234 Country Club Ave</MyTitle>
         <MyTitle size="regular" el="p" color="grey">NC 123456, London, UK</MyTitle>
         <MyTitle size="regular" el="p" color="grey">+0123 456 7891</MyTitle>
@@ -51,19 +53,34 @@ import MyTitle from '../components/elements/MyTitle.vue';
 <style lang="scss" scoped>
 
 .footer {
-    display: grid;
-  grid-template-columns:  repeat(4, 1fr);
-  place-items: start;
-  gap: rem(70);
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: start;
+
+  @media screen and (max-width: $large){
+  flex-direction: column;
+  }
+  
+  gap: rem(40);
   background-color: #FAFAFF;
   padding: rem(50) rem(100);
   margin-top : rem(100);
-
+ &__grid{
+  width: rem(375);
+ }
   &__grid-title {
-    margin-bottom: rem(50);
+    margin-bottom: rem(50);    
   }
 
-  
+  &__grid {
+    &-space{
+      
+  > * {
+      padding-bottom: rem(10);
+      }
+}
+  }
 
   &__grid img {
     width: rem(150);
@@ -76,6 +93,8 @@ import MyTitle from '../components/elements/MyTitle.vue';
     padding: rem(20) rem(0);
   }
 }
+
+
 
 
 

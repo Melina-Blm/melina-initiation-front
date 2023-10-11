@@ -18,10 +18,10 @@ import MyTitle from '../elements/MyTitle.vue';
 
 .btn {
     display: inline-flex;
-    gap:rem(70);
+    gap:rem(60);
     align-items: center;
     background-color: $secondary-color;
-    padding: rem(5) rem(5) rem(5) rem(20);
+    padding: rem(4) rem(4) rem(4) rem(20);
     border-radius: rem(60);
     color:$primary-color;
 

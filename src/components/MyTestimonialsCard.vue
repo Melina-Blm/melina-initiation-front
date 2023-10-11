@@ -23,6 +23,7 @@ defineProps ({
     <MyIcon class="card__icon1" name="arrow left" variant="orange" stroke="white" size="regular"/>
     <MyIcon class="card__icon2" name="arrow right2" variant="orange" stroke="white" size="regular"/>
 
+
     <div class="card__content">
       <img :src='imageSrc' :alt="imageAlt" />
       <div class="card__title">
@@ -49,13 +50,10 @@ defineProps ({
         height: rem(250);
         border-radius: rem(20);
         border : rem(1) solid $gray;
-        overflow: hidden;
         padding:rem(50);
-       
         display: flex;
         flex-direction: column;
         justify-content: center;
-   
         
         &__icon1 {
             position: absolute;

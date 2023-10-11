@@ -1,6 +1,6 @@
 <script setup>
 import MyIcon from './elements/MyIcon.vue';
-import MyTitle from './elements/MyTitle.vue';
+
 
 </script>
 
@@ -17,7 +17,7 @@ import MyTitle from './elements/MyTitle.vue';
   </nav>
   <div class="searchbar">
 <MyIcon name="search" variant="nobg" stroke="black" size="regular"/>
-<MyTitle size="regular" el="p" weight="bold" class="space">Search</MyTitle>
+<input type="text" placeholder="Search">
 <div class="shoppingcart"> 
   <MyIcon name="cart" variant="nobg" stroke="black" size="regular"></MyIcon>
   <p class="shoppingcart_quantity">2</p>
@@ -75,6 +75,15 @@ nav {
   border-radius: rem(10);
   padding: rem(10);
   box-shadow: 0 2px 5px 0 $gray;
+
+  input {
+    border: none;
+    font-size: $regular-font-size;
+    font-weight: bold;
+    color: $black;
+
+
+  }
   .space{
     padding-right: rem(130);
     border-right: 1px solid $gray;

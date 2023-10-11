@@ -29,7 +29,7 @@ defineProps({
       </div>
       <p>{{ description }}</p>
       <div class="card__button">
-        <MyButton variant="rounded" :has-icon="true" size="small">{{ buttonLabel }}</MyButton>
+        <MyButton variant="rounded" :has-icon="false" size="small">{{ buttonLabel }}</MyButton>
         <MyTitle size="regular" el="p" weight="bold">${{ price }}</MyTitle>
       </div>
       

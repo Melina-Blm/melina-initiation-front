@@ -14,8 +14,13 @@ import MyTitle from '../components/elements/MyTitle.vue';
         <MyTitle size="big" el="h3" weight="bold" color="white">Subscribe To Our Newsletter</MyTitle>
         <MyTitle size="regular" el="p" color="white">Lorem ipsum dolor sit amet, consectetur adipidrscing elit. Purus mauris sem sed urna venenatis vivamus. Egestas in velit nulla viverra turpis id ac. Amet faucibus tempus.</MyTitle>
         <div class="newsletter__rightcontent-btn">
-        <input type="text" placeholder="Type your email...">
-        <button>Subscribe</button>
+        <div class="newsletter__input">  
+            <input type="text" placeholder="Type your email...">
+            <div class="newsletter__btn">
+                <button>Subscribe</button>
+            </div>
+            
+        </div>      
         </div>
       
     </div>
@@ -38,8 +43,9 @@ height: rem(320);
 
 .newsletter__leftcontent img {
     max-width: rem(600);
-    bottom: rem(-100);
-    left: rem(40);
+    top:50%;
+    left:25%;
+    transform: translate(-50%, -50%);
     position:absolute;
 }
 
@@ -49,7 +55,7 @@ height: rem(320);
     width: 80%;
     flex-direction: column;
     justify-content: center;
-    gap: rem(25);
+    gap: rem(20);
     padding: rem(0) rem(100) rem(0) rem(0);
 
     &-btn input {
@@ -60,13 +66,26 @@ height: rem(320);
         border: none;
     }
     &-btn button {
-        padding: rem(10) rem(20);
+        padding: rem(13) rem(20);
         background-color: $primary-color;
         font-weight: 600;
         color: white;
         border: none;
-        border-radius: rem(10);
+        border-radius: rem(15);
         text-transform: uppercase;
+
     }
+    .newsletter__input {
+        position:relative;
+        .newsletter__btn {
+        position: absolute;
+  
+        top:50%;
+        right:-15%;
+        transform: translate(-50%, -50%);
+
+    }
+    }
+    
 }
 </style>

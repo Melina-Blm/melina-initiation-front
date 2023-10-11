@@ -49,13 +49,19 @@ const cards = reactive(response)
 <style lang="scss" scoped> 
 
 .cards {
+    gap: rem(25);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    gap: rem(20);
+    place-items: stretch;
     
 
+    @media screen and (max-width: $big){
+  
+    grid-template-columns:  repeat(2, 1fr);
+    }
+    @media screen and (max-width: $large){
 
- 
+    grid-template-columns:  repeat(1, 1fr);
+    }
 }
 </style>

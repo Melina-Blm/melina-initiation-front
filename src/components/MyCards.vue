@@ -75,6 +75,15 @@ const cards = reactive(response)
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: rem(20)
+    gap: rem(20);
+
+    @media screen and (max-width: $big){
+  
+    grid-template-columns:  repeat(2, 1fr);
+    }
+    @media screen and (max-width: $large){
+  
+    grid-template-columns:  repeat(1, 1fr);
+    }
 }
 </style>

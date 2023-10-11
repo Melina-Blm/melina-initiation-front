@@ -40,6 +40,14 @@ import MyTestimonialsCards from './MyTestimonialsCards.vue';
   grid-template-columns:  repeat(2, 1fr);
   place-items: center;
   margin-bottom: rem(150);
+
+  @media screen and (max-width: $big){
+  grid-template-columns:  repeat(1, 1fr);
+
+  &__rightcontent {
+    margin-top:rem(60);
+  }
+  }
   &__rightcontent img{
     max-width: rem(600);
   }
