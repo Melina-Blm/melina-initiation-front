@@ -39,10 +39,9 @@ import MyHeroCards from './MyHeroCards.vue';
 .hero {
   display: grid;
   grid-template-columns:  repeat(2, 1fr);
-  align-items: center;
-  place-items: start;
-  
 
+  place-items: center;
+  justify-items: end;
   position: relative;
   &__img {
     position: absolute;
@@ -53,8 +52,12 @@ import MyHeroCards from './MyHeroCards.vue';
     
 
   }
+
+   
+  
   &__leftcontent > * {
     margin-bottom: rem(25);
+    
   }
   // display: flex;
   //   flex-direction: column;

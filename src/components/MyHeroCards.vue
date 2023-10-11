@@ -49,6 +49,10 @@ const cards = reactive(response)
 .cards{
   display: grid;
   grid-template-columns: repeat(2, 280px);
+  justify-items: end;
+
+ 
+
   
 }
 </style>

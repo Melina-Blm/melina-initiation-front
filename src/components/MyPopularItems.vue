@@ -2,7 +2,7 @@
 import MyCards from '../components/MyCards.vue'
 import MyTitle from '../components/elements/MyTitle.vue';
 import MyButton from './elements/MyButton.vue';
-import MyIcon from './elements/MyIcon.vue';
+
 
 
 
@@ -34,6 +34,7 @@ import MyIcon from './elements/MyIcon.vue';
   justify-content: center;
   margin: auto;
   align-items: center;
+  text-decoration: none;
 }
 
 </style>

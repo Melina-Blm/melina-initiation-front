@@ -4,6 +4,8 @@ import { onMounted, ref, computed } from "vue";
 import {client} from '@/utils/axios.js';
 import MyHeader from '../components/MyHeader.vue';
 import MyTitle from '../components/elements/MyTitle.vue';
+import MyButton from '../components/elements/MyButton.vue'
+import MyFooter from '../components/MyFooter.vue'
 
 const getRecipesThen = () => {
   // 1er appel
@@ -95,6 +97,7 @@ onMounted(async () => {
 </script>
 
 <template>
+
     <div class="content">
 <MyHeader/>
 
@@ -114,12 +117,14 @@ onMounted(async () => {
       <div v-for="(recipe, index) in recipes" :key="index">
         <RecipeCard :id="recipe.recipe_id" :title="recipe.recipe_name" :description="recipe.recipe_description" :image="recipe.image_url" />
       </div>
-      <button @click="addRecipe">Ajouter une recette</button>
     </div>
+    <MyButton class="btn-add" variant="rounded" size="regular" @click="addRecipe">Ajouter une recette</MyButton>
     <!-- recipesNames : {{ recipesNames }}<br><br>
 spaghettiRecipes :{{ spaghettiRecipes }}<br><br>
 hasGoalId1 {{ hasGoalId1 }}<br><br> -->
+
     </div>
+    <MyFooter/>
 </template>
 
 <style lang="scss" scoped>
@@ -141,12 +146,7 @@ hasGoalId1 {{ hasGoalId1 }}<br><br> -->
 
   grid-template-columns:  repeat(1, 1fr);
   }
-
-  &button {
-    background-color: red;
-  }
 }
-
 
 .section {
   text-align: center;
@@ -156,5 +156,9 @@ hasGoalId1 {{ hasGoalId1 }}<br><br> -->
   }
 
 }
+.btn-add {
+  display: block;
+  margin: rem(60) auto;
 
+}
 </style>
