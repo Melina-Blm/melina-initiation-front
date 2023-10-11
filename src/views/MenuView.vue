@@ -1,15 +1,8 @@
 <script setup>
-import MyHeader from '../components/MyHeader.vue';
-import MyFooter from '../components/MyFooter.vue';
-import MyHero from '../components/MyHero.vue'
-import MyPopularItems from '../components/MyPopularItems.vue';
-import MyServices from '../components/MyServices.vue';
-import MyTestimonials from '../components/MyTestimonials.vue';
-import MyNewsletter from '../components/MyNewsletter.vue';
-import MyContactCards from '../components/MyContactCards.vue';
 import RecipeCard from '../components/RecipeCard.vue';
 import { onMounted, ref, computed } from "vue";
 import {client} from '@/utils/axios.js';
+import MyHeader from '../components/MyHeader.vue';
 
 const getRecipesThen = () => {
   // 1er appel
@@ -101,39 +94,38 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="content">
-    <MyHeader/>
-<!-- 
-    <ul>
-      <li v-for ="(recipe, index) in recipes" :key="index">
-        {{ recipe.recipe_name }}
+    <div class="content">
+<MyHeader/>
 
-      </li>
-    </ul> -->
+    <!-- <p>Recettes de la grille</p>
+        <div class="recipes-list">
+        <div v-for="(recipe, index) in gridRecipes" :key="index">
+            <RecipeCard :id="recipe.recipe_id" :title="recipe.recipe_name" :description="recipe.recipe_description" :image="recipe.image_url" />
+        </div>
+        </div>
+        <button v-if="moreRecipesToShow" @click="seeMoreRecipe">Voir plus de recettes</button> -->
 
-
-
-    <MyHero/>
-    <MyContactCards/>
-
-    <MyPopularItems/>
-  
-    <MyServices/> 
-    <MyTestimonials/>
-    <MyNewsletter/> 
-
-  </div>
-<MyFooter/>
-
-
+    <p>Toutes les recettes</p>
+    <div class="recipes-list">
+      <div v-for="(recipe, index) in recipes" :key="index">
+        <RecipeCard :id="recipe.recipe_id" :title="recipe.recipe_name" :description="recipe.recipe_description" :image="recipe.image_url" />
+      </div>
+      <button @click="addRecipe">Ajouter une recette</button>
+    </div>
+    <!-- recipesNames : {{ recipesNames }}<br><br>
+spaghettiRecipes :{{ spaghettiRecipes }}<br><br>
+hasGoalId1 {{ hasGoalId1 }}<br><br> -->
+    </div>
 </template>
 
 <style lang="scss" scoped>
-
-
 .content {
   margin: 0 rem(100);
 }
 
+.recipes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
 </style>
-

@@ -9,8 +9,8 @@ import MyIcon from './elements/MyIcon.vue';
   <img src="../assets/logo.png" alt="">
   <nav class="header__nav">
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Menu</a></li>
+      <router-link to="/">Home</router-link>
+      <router-link to="/menu">Recettes</router-link>
       <li><a href="#">Service</a></li>
       <li><a href="#">Shops</a></li>
     </ul>
