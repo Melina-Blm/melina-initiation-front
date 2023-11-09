@@ -86,6 +86,7 @@ onMounted (async () => {
     &__right {
       background-color: $white;
       border : 1px solid $gray;
+      border-radius: 20px;
       padding:rem(50);
       display: flex;
       flex-direction: column;
